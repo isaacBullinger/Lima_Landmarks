@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Lima Peru Interactive Map</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+      var esriConfig = {
+        apiKey: "API_KEY_HERE"
+      };
+    </script>
+
+    <!-- Load Calcite components from CDN -->
+    <script type="module" src="https://js.arcgis.com/calcite-components/3.0.3/calcite.esm.js"></script>
+
+    <!-- Load the ArcGIS Maps SDK for JavaScript from CDN -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.32/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.32/"></script>
+
+    <!-- Load Map components from CDN-->
+    <script
+      type="module"
+      src="https://js.arcgis.com/map-components/4.32/arcgis-map-components.esm.js"
+    ></script>
+
+  </head>
+
+  <body>
+
+    <!-- Filter for map landmarks -->
+    <label for="landmarkFilter">Filter Landmarks:</label>
+    <select id="landmarkFilter">
+      <option value="all">All</option>
+      <option value="Church">Church</option>
+      <option value="Historical Site">Historical Sites</option>
+      <option value="Park">Parks</option>
+      <option value="Temple">Temple</option>
+      <option value="Viewpoint">Viewpoint</option>
+    </select>
+
+    <!-- Creates the map and centers it on Lima -->
+    <arcgis-map basemap="arcgis/topographic" center="-77.0428, -12.0464" zoom="12">
+
+      <!-- Adds zoom buttons -->
+      <arcgis-zoom position="top-left"></arcgis-zoom>
+
+    </arcgis-map>
+
+  </body>
+
+  <script src="scripts.js"></script>
+
+</html>
