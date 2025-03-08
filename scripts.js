@@ -190,7 +190,6 @@ require([
         // Clear previous markers
         graphicsLayer.removeAll();
 
-
         filteredLandmarks.forEach(landmark => {
         const point = {
             type: "point",
